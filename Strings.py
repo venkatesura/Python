@@ -68,4 +68,81 @@ Usage: thingy [OPTIONS]
       'to have them joined together.')
 >>> text
 'Put several strings within parantheses to have them joined together.'
+>>> prefix='Py'
+>>> prefix 'thon'
+SyntaxError: invalid syntax
+>>> prefix + 'thon'
+'Python'
+>>> word='Python'
+>>> word[0]
+'P'
+>>> word[5]
+'n'
+>>> word[-1]
+'n'
+>>> word[-2]
+'o'
+>>> word[-6]
+'P'
+>>> word[0:2]
+'Py'
+>>> word[2:5]
+'tho'
+>>> word[:2]+word[2:]
+'Python'
+>>> word[:4]+word[4:]
+'Python'
+>>> word[:2]
+'Py'
+>>> word[4:]
+'on'
+>>> word[-2]
+'o'
+>>> word[42]
+Traceback (most recent call last):
+  File "<pyshell#44>", line 1, in <module>
+    word[42]
+IndexError: string index out of range
+>>> word[4:42]
+'on'
+>>> word[0]='J'
+Traceback (most recent call last):
+  File "<pyshell#46>", line 1, in <module>
+    word[0]='J'
+TypeError: 'str' object does not support item assignment
+>>> word[2:]='py'
+Traceback (most recent call last):
+  File "<pyshell#47>", line 1, in <module>
+    word[2:]='py'
+TypeError: 'str' object does not support item assignment
+>>> 
+'J' + word[1:]
+'Jython'
+>>> word[:2]+'py'
+'Pypy'
+>>> s='supercalifragilisticexpialidocious'
+>>> len(s)
+34
+>>> s=a
+Traceback (most recent call last):
+  File "<pyshell#52>", line 1, in <module>
+    s=a
+NameError: name 'a' is not defined
+>>> s='a'
+>>> print(str.capitalize(a))
+Traceback (most recent call last):
+  File "<pyshell#54>", line 1, in <module>
+    print(str.capitalize(a))
+NameError: name 'a' is not defined
+>>> print(a.capitalize())
+Traceback (most recent call last):
+  File "<pyshell#55>", line 1, in <module>
+    print(a.capitalize())
+NameError: name 'a' is not defined
+>>> a=str.capitalize('a')
+>>> print(a)
+A
+>>> s='a'
+>>> print(str.capitalize(s))
+A
 >>> 
